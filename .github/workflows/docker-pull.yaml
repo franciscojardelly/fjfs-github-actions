@@ -1,0 +1,16 @@
+name: Donwload and scan image
+
+on:
+  workflow_dispatch:
+    inputs:
+      image_tag:
+        required: true
+        description: Digite a url/tag da imagem docker
+        type: string
+
+jobs: 
+  print-tag:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Mostra a url/tag da image passada
+        run: echo "A tag passada eh" ${{ inputs.image_tag }}

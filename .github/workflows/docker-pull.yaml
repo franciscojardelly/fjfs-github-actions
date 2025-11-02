@@ -19,4 +19,15 @@ jobs:
         run: docker pull ${{ inputs.image_tag }}
 
       - name: listando a imagem
-        run: docker images   
+        run: docker images
+
+      - name: Docker Scout
+        id: docker-scout
+        uses: docker/scout-action@v1
+        with:
+          command: cves,recommendations,compare
+          image: ${{ inputs.image_tag }}
+          to-latest: true
+          ignore-base: true
+          ignore-unchanged: true
+          only-fixed: true        

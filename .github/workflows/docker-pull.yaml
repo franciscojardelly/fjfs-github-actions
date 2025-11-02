@@ -9,7 +9,7 @@ on:
         type: string
 
 jobs: 
-  print-tag:
+  image_scan_vulnerability:
     runs-on: ubuntu-latest
     environment: TST
     steps:

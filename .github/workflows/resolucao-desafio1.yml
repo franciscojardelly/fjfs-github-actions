@@ -9,7 +9,7 @@ on:
         default: 'nginx:latest'
         type: string
 
-# Scan image security ###Teste
+# Scan image security ###Teste###
 jobs:
   pipeline-seguranca:
     runs-on: ubuntu-latest
